@@ -1,6 +1,6 @@
 {
   "name": "travel-services-aggregator",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "private": true,
   "author": "Nikita Usov <foxwel.info@gmail.com>",
@@ -16,7 +16,11 @@
     "lint:code": "eslint",
     "lint:types": "tsc --noEmit",
     "lint:commit": "commitlint --edit",
-    "prepare": "husky"
+    "docker:build": "docker build -t travel-services-aggregator .",
+    "docker:run": "docker run -p 3000:3000 --name travel-services-aggregator-container travel-services-aggregator",
+    "docker:stop": "docker stop travel-services-aggregator-container",
+    "docker:remove": "docker rm travel-services-aggregator-container",
+    "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -38,7 +42,6 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "husky": "^9.1.7",
     "prettier": "^3.8.1",
-    "semantic-release": "^25.0.3",
     "tailwindcss": "^4.2.0",
     "typescript": "^5.9.3"
   },
