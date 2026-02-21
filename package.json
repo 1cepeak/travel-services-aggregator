@@ -16,7 +16,11 @@
     "lint:code": "eslint",
     "lint:types": "tsc --noEmit",
     "lint:commit": "commitlint --edit",
-    "prepare": "husky"
+    "docker:build": "docker build -t travel-services-aggregator .",
+    "docker:run": "docker run -p 3000:3000 --name travel-services-aggregator-container travel-services-aggregator",
+    "docker:stop": "docker stop travel-services-aggregator-container",
+    "docker:remove": "docker rm travel-services-aggregator-container",
+    "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
     "next": "16.1.6",
