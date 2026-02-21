@@ -1,12 +1,22 @@
 {
   "name": "airport-services-aggregator",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "type": "module",
   "private": true,
+  "author": "Nikita Usov <foxwel.info@gmail.com>",
+  "license": "NO-LICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1cepeak/airport-services-aggregator"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint:code": "eslint",
+    "lint:types": "tsc --noEmit",
+    "lint:commit": "commitlint --edit",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -14,14 +24,27 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@tailwindcss/postcss": "^4.2.0",
+    "@types/node": "^24.10.13",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
+    "eslint": "^9.39.3",
     "eslint-config-next": "16.1.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.1",
+    "semantic-release": "^25.0.3",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": ">=24.11.0",
+    "pnpm": ">=10.10.0"
   }
 }
