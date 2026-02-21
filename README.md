@@ -49,6 +49,10 @@ pnpm lint:types
 
 Перед каждым коммитом автоматически запускаются `lint:code` и `lint:types` (pre-commit hook).
 
+### Ветки
+
+Для каждой задачи или фичи необходимо создавать отдельную ветку от `main`. Работа напрямую в `main` запрещена.
+
 ### Коммиты
 
 Используется [Conventional Commits](https://www.conventionalcommits.org/) — сообщения коммитов проверяются через **Commitlint** и **Husky** (commit-msg hook).
