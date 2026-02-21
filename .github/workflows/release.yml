@@ -91,3 +91,7 @@ jobs:
           subject-name: ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_IMAGE_NAME }}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
+
+      - name: Trigger deploy to DEV
+        if: github.ref == 'refs/heads/main'
+        run: curl -X POST "${{ secrets.DOKPLOY_WEBHOOK_URL }}" --fail --silent --show-error --max-time 30
