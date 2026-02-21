@@ -1,5 +1,5 @@
 {
-  "name": "airport-services-aggregator",
+  "name": "travel-services-aggregator",
   "version": "1.0.0",
   "type": "module",
   "private": true,
@@ -7,7 +7,7 @@
   "license": "NO-LICENSED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1cepeak/airport-services-aggregator"
+    "url": "https://github.com/1cepeak/travel-services-aggregator"
   },
   "scripts": {
     "dev": "next dev",

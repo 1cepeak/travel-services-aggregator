@@ -1,4 +1,4 @@
-# airport-services-aggregator
+# travel-services-aggregator
 
 Агрегатор услуг для путешествий
 
